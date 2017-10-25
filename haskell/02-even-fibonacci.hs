@@ -5,7 +5,7 @@ fibonacci x
 
 generateFibonacciSequence :: Int -> [Int]
 generateFibonacciSequence maxValue =
-  takeWhile (\x -> x < maxValue ) (map fibonacci [1..])
+  takeWhile ((>) maxValue) $ map fibonacci [1..]
 
 sumEvens :: [Int] -> Int
 sumEvens numbers =
