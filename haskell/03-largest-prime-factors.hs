@@ -1,16 +1,5 @@
 import Data.Maybe
-
-isPrime :: Int -> Bool
-isPrime num =
-    let
-      comparator =
-        (== 0) . mod num
-
-      limit =
-        ceiling . sqrt $ fromIntegral num
-    in
-       all comparator [2..limit]
-
+import Helpers(isPrime)
 
 getFactors :: Int -> [Int]
 getFactors num =
