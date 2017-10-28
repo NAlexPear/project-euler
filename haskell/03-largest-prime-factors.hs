@@ -8,11 +8,8 @@ isPrime num =
 
       limit =
         ceiling . sqrt $ fromIntegral num
-
-      set =
-        [x | x <- [2..limit], comparator x]
     in
-      (==) 0 $ length set
+       all comparator [2..limit]
 
 
 getFactors :: Int -> [Int]
