@@ -13,17 +13,9 @@ getDigits =
   map (read . return) . show
 
 
-joinDigits :: [Int] -> Int
-joinDigits =
-  read . concatMap show
-
-
 isPalindromeList :: [Int] -> Bool
 isPalindromeList numList =
-  case numList of
-    [x]   -> True
-    [x,xs] -> x == xs
-    (x:xs) -> x == last xs && isPalindromeList (init xs)
+  numList == reverse numList
 
 
 isPalindromeProduct :: Int -> Bool
